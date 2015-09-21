@@ -1,5 +1,5 @@
-# boxcar-notifications-php
-A Boxcar api wrapper for sending notifications to a Boxcar account
+# Boxcar Notifications API PHP wrapper
+A Boxcar api wrapper for sending notifications to a Boxcar account without any dependencies except the cURL library.
 
 [![Packagist](https://img.shields.io/packagist/v/zortje/boxcar-notifications-php.svg?style=flat)](https://packagist.org/packages/zortje/boxcar-notifications-php)
 [![Travis](https://img.shields.io/travis/zortje/boxcar-notifications-php.svg?style=flat)](https://travis-ci.org/zortje/boxcar-notifications-php)
