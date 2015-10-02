@@ -208,38 +208,13 @@ class Boxcar {
 	 */
 	public function push(Notification $notification) {
 		/**
-		 * Prepare data
-		 */
-		$data = [
-			'user_credentials'           => $this->accessToken,
-			'notification[title]'        => $notification->getTitle(),
-			'notification[long_message]' => $notification->getContent()
-		];
-
-		if (!empty($this->getSourceName())) {
-			$data['notification[source_name]'] = $this->getSourceName();
-		}
-
-		if (!empty($this->getIconUrl())) {
-			$data['notification[icon_url]'] = $this->getIconUrl();
-		}
-
-		if (!empty($this->getSound())) {
-			$data['notification[sound]'] = $this->getSound();
-		}
-
-		if (!empty($this->getOpenUrl())) {
-			$data['notification[open_url]'] = $this->getOpenUrl();
-		}
-
-		/**
 		 * Init curl, execute and close
 		 */
 		$curl = curl_init();
 
 		curl_setopt($curl, CURLOPT_URL, self::ENDPOINT);
 		curl_setopt($curl, CURLOPT_USERAGENT, self::USER_AGENT);
-		curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+		curl_setopt($curl, CURLOPT_POSTFIELDS, $this->createPostFields($notification));
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
 		curl_exec($curl);
@@ -261,5 +236,44 @@ class Boxcar {
 		}
 
 		return false;
+	}
+
+	/**
+	 * Create post fields for API request based on provided notification object
+	 *
+	 * @param Notification $notification
+	 *
+	 * @return array Post fields
+	 */
+	private function createPostFields(Notification $notification) {
+		/**
+		 * Required fields
+		 */
+		$data = [
+			'user_credentials'           => $this->accessToken,
+			'notification[title]'        => $notification->getTitle(),
+			'notification[long_message]' => $notification->getContent()
+		];
+
+		/**
+		 * Optional fields
+		 */
+		if (!empty($this->getSourceName())) {
+			$data['notification[source_name]'] = $this->getSourceName();
+		}
+
+		if (!empty($this->getIconUrl())) {
+			$data['notification[icon_url]'] = $this->getIconUrl();
+		}
+
+		if (!empty($this->getSound())) {
+			$data['notification[sound]'] = $this->getSound();
+		}
+
+		if (!empty($this->getOpenUrl())) {
+			$data['notification[open_url]'] = $this->getOpenUrl();
+		}
+
+		return $data;
 	}
 }
