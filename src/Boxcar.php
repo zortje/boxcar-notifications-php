@@ -252,15 +252,12 @@ class Boxcar {
 		switch ($info['http_code']) {
 			case 201:
 				return true;
-				break;
 
 			case 401:
 				throw new InvalidAccessTokenException('Not Authorized: Access token not recognized');
-				break;
 
 			case 404:
 				throw new NoDeviceAssociatedException('Not Found: No device associated with provided access token');
-				break;
 		}
 
 		return false;
