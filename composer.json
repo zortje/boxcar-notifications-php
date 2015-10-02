@@ -19,7 +19,7 @@
         "issues": "https://github.com/zortje/boxcar-notifications-php/issues"
     },
     "require": {
-        "php": ">=5.4",
+        "php": ">=5.5",
         "lib-curl": "*"
     },
     "require-dev": {
