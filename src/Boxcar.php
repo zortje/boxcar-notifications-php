@@ -243,7 +243,7 @@ class Boxcar {
 	 *
 	 * @param Notification $notification
 	 *
-	 * @return array Post fields
+	 * @return array<string,string> Post fields
 	 */
 	private function createPostFields(Notification $notification) {
 		/**
