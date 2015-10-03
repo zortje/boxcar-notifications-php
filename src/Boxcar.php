@@ -201,7 +201,7 @@ class Boxcar {
 	 *
 	 * @param Notification $notification
 	 *
-	 * @return bool
+	 * @return bool TRUE if successful, otherwise FALSE
 	 *
 	 * @throws InvalidAccessTokenException
 	 * @throws NoDeviceAssociatedException
