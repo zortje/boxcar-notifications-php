@@ -103,4 +103,4 @@ Built by following the API specs provided in thie Boxcar help [article](http://h
 
 ## Disclaimer
 
-I am not affiliated with Boxcar in any way. 
+I am not affiliated with Boxcar in any way.
