@@ -7,6 +7,7 @@ namespace Zortje\BoxcarNotifications\Exception;
  *
  * @package Zortje\BoxcarNotifications\Exception
  */
-class InvalidAccessTokenException extends \Exception {
+class InvalidAccessTokenException extends \Exception
+{
 
 }

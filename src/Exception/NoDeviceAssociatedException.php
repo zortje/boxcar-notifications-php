@@ -7,6 +7,7 @@ namespace Zortje\BoxcarNotifications\Exception;
  *
  * @package Zortje\BoxcarNotifications\Exception
  */
-class NoDeviceAssociatedException extends \Exception {
+class NoDeviceAssociatedException extends \Exception
+{
 
 }
