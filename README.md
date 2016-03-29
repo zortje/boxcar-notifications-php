@@ -99,7 +99,7 @@ The following sounds can be used.
 
 ## Acknowledgement
 
-Built by following the API specs provided in thie Boxcar help [article](http://help.boxcar.io/support/solutions/articles/6000004813-how-to-send-a-notification-to-boxcar-for-ios-users).
+Built by following the API specs provided in this Boxcar help [article](http://help.boxcar.io/support/solutions/articles/6000004813-how-to-send-a-notification-to-boxcar-for-ios-users).
 
 ## Disclaimer
 
